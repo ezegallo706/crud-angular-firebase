@@ -1,16 +1,26 @@
-      <!-- <table mat-table *ngFor="let product of productList">
-           
-               <td>{{product.name}}<td>
-               
-           
-       </table> -->
-       <table>
-           <tr *ngFor="let product of productList">
-               <td>{{product.name}}</td>
-               <td>{{product.category}}</td>
-               <td>{{product.location}}</td>
-               <td>{{product.price}}</td>
-               <td><button mat-button (click)="onEdit(product)"><mat-icon>create</mat-icon></button></td>
-               <td><button mat-button (click)="onDelete(product.$key)"><mat-icon>delete_sweep</mat-icon></button></td>
-           </tr>
-       </table>
+<table class="table table-striped">
+  <tr>
+    <th>Nombre</th>
+    <th>Categoría</th>
+    <th>Locación</th>
+    <th>Precio</th>
+    <th>Editar</th>
+    <th>Borrar</th>
+  </tr>
+  <tr *ngFor="let product of productList">
+    <td>{{product.name}}</td>
+    <td>{{product.category}}</td>
+    <td>{{product.location}}</td>
+    <td>{{product.price}}</td>
+    <td>
+      <button mat-button (click)="onEdit(product)">
+        <mat-icon>create</mat-icon>
+      </button>
+    </td>
+    <td>
+      <button mat-button (click)="onDelete(product.$key)">
+        <mat-icon>delete_sweep</mat-icon>
+      </button>
+    </td>
+  </tr>
+</table>

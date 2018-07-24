@@ -28,7 +28,7 @@ import {
 import { MatTabsModule } from '@angular/material/tabs';
 import { MatInputModule } from '@angular/material/input';
 import { MatListModule } from '@angular/material/list';
-import {MatTableModule} from '@angular/material/table';
+import {MatTableModule, MatSortModule} from '@angular/material';
 import 'hammerjs';
 
 //End Angular Material Modules
@@ -66,7 +66,8 @@ import { ProductComponent } from './components/product/product.component';
     MatTabsModule,
     MatListModule,
     MatFormFieldModule,
-    MatTableModule
+    MatTableModule,
+    MatSortModule
     
   ],
   providers: [ProductService],
