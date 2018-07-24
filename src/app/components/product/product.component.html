@@ -1,0 +1,58 @@
+<form #productForm="ngForm" (ngSubmit)="onSubmit(productForm)">
+    <input type="hidden"
+        name="$key"
+         #$key="ngModel"
+         [(ngModel)]="productService.selectedProduct.$key">
+
+    <mat-form-field class="example-full-width">
+        <input matInput 
+         type="text"
+         name="name"
+         #name="ngModel"
+         [(ngModel)]="productService.selectedProduct.name"
+         placeholder="Producto">
+      </mat-form-field>
+    
+      <mat-form-field class="example-full-width">
+          <input matInput 
+           type="text"
+           name="category"
+           #category="ngModel"
+           [(ngModel)]="productService.selectedProduct.category"
+           placeholder="Categoría">
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width">
+                <input matInput 
+                 type="text"
+                 name="location"
+                 #location="ngModel"
+                 [(ngModel)]="productService.selectedProduct.location"
+                 placeholder="Categoría">
+              </mat-form-field>
+
+        <mat-form-field class="example-full-width">
+            <input matInput 
+             type="text"
+             name="price"
+             #price="ngModel"
+             [(ngModel)]="productService.selectedProduct.price"
+             placeholder="Precio">
+          </mat-form-field>
+
+          <mat-form-field class="example-full-width">
+                <button 
+                mat-flat-button color="primary"
+                type="submit">
+                    Agregar producto
+                </button>
+              </mat-form-field>
+              <mat-form-field class="example-full-width">
+                    <button 
+                    mat-flat-button color="primary"
+                    type="reset"
+                    (click)="resetForm(productForm)">
+                        Resetear
+                    </button>
+                  </mat-form-field>
+</form>

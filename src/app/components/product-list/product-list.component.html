@@ -1,0 +1,16 @@
+      <!-- <table mat-table *ngFor="let product of productList">
+           
+               <td>{{product.name}}<td>
+               
+           
+       </table> -->
+       <table>
+           <tr *ngFor="let product of productList">
+               <td>{{product.name}}</td>
+               <td>{{product.category}}</td>
+               <td>{{product.location}}</td>
+               <td>{{product.price}}</td>
+               <td><button mat-button (click)="onEdit(product)"><mat-icon>create</mat-icon></button></td>
+               <td><button mat-button (click)="onDelete(product.$key)"><mat-icon>delete_sweep</mat-icon></button></td>
+           </tr>
+       </table>
